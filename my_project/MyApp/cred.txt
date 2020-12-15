@@ -1,0 +1,4 @@
+database = MyDjangoApp
+user = vijay
+password = vijay123
+default-character-set = utf8
