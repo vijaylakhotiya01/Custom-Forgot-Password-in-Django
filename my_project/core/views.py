@@ -5,18 +5,10 @@ from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import BadHeaderError, send_mail
 from django.db.models import Q
 from django.shortcuts import render, redirect
-# importing loading from django template
-from django.template import loader
-# Create your views here.
 from django.http import HttpResponse
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
-
-
-def index(request):
-    template = loader.get_template('index.html')  # getting our template
-    return HttpResponse(template.render())  # rendering the template in HttpResponse
 
 
 def password_reset_request(request):
